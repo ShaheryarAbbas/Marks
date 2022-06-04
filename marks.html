@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Condition Function</title>
+</head>
+<body>
+    <label for="">Physics</label>
+    <input type="text" id="phy">
+    <br>
+    <br>
+    <label for="">Chemistry</label>
+    <input type="text" id="che">
+    <br>
+    <br>
+    <label for="">Biology</label>
+    <input type="text" id="bio">
+    <br>
+    <br>
+    <label for="">English</label>
+    <input type="text" id="eng">
+    <br>
+    <br>
+    <label for="">Math</label>
+    <input type="text" id="math">
+    <br>
+    <br>
+    <button type="submit" onclick="res()"> Check</button>
+    <div id="demo"></div>
+    <script>
+        function res(){
+            var p=parseInt(document.getElementById("phy").value);
+            var c=parseInt(document.getElementById("che").value);
+            var b=parseInt(document.getElementById("bio").value);
+            var e=parseInt(document.getElementById("eng").value);
+            var m=parseInt(document.getElementById("math").value);
+            var ob= p+c+b+e+m;
+            var per = (ob/500)*100;
+            
+            if(per>80){
+                document.getElementById("demo").innerHTML="Physics" + p + "<br> Chemistry" + c + "<br> Biology" + b + "<br> English" + b + "<br> Math" + m
+                +"<br>Percantage <br>"+ per + "<br> Grade A";
+            }
+            else if(per>=70){
+                document.getElementById("demo").innerHTML="Physics" + p + "<br> Chemistry" + c + "<br> Biology" + b + "<br> English" + b + "<br> Math" + m
+                +"<br>Percantage <br>"+ per + "<br> Grade B"
+            }
+            else if(per>=60){
+                document.getElementById("demo").innerHTML="Physics" + p + "<br> Chemistry" + c + "<br> Biology" + b + "<br> English" + b + "<br> Math" + m
+                +"<br>Percantage <br>"+ per + "<br> Grade C"
+            }
+            else{
+                document.getElementById("demo").innerHTML="Physics" + p + "<br> Chemistry" + c + "<br> Biology" + b + "<br> English" + b + "<br> Math" + m
+                +"<br>Percantage <br>"+ per + "<br> Fail";
+            }
+
+
+        }
+    </script>
+</body>
+</html>
